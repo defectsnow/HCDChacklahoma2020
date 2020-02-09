@@ -1,0 +1,285 @@
+<?php
+              Include_once ‘connection.php’;
+?>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HCDC</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Cambay&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <ul class="navBar">
+      <li class="navItem active"><a href="#">Home</a></li>
+      <li class="navItem"><a href="mission.html">Our Mission</a></li>
+      <li class="navItem" style="float: right"><a href="mailto:fuck@off.edu?subject='lame'">Join our Mailing List</a></li>
+    </ul>
+    <div id="emergency" class="emergency"></div>
+    <video src="earth1.mp4" autoplay muted loop></video>
+    <div class="bgText"><b class="killme">EACH YEAR, WE'RE INCHING CLOSER TO OUR CLIMATE FUTURE.</b></div>
+    <select id="10" onchange="switchPlace(value)" class="dropdown" name="Wabba" >
+      <option value="0" selected disabled hidden>Choose a state here</option>
+      <option onclick="window.scrollBy(0,400)" value="1">Alaska</option>
+      <option onclick="window.scrollBy(0,400)" value="2">California</option>
+      <option onclick="window.scrollBy(0,400)" value="3">Oklahoma</option>
+    </select>
+    <?php
+    $sql = “SELECT COUNT (EVENT_TYPE)
+    FROM StormEventDetails
+    	WHERE state = 'oklahoma' and EVENT_TYPE = 'flash flood';  ”;
+    	$result = mysqli_query($conn, $sql);
+    ?>
+
+
+    <!-- Oklahoma -->
+    <div id="3" class="">
+      <div id="3" class="slideshow-container">
+
+        <div class="mySlides1">
+          <video src="tulsa2.mp4" muted loop></video>
+          <div class="info">
+              <h1>LATELY, TULSA'S HAD HOTTER SUMMERS AND STRONGER FLASHFLOODS</h1>
+              <div class="row">
+                <div class="statContainer">
+                  <p>Temperature</p>
+                  <h2>&#8593 1.5 deg</h2>
+                  <p>Since 2000</p>
+                </div>
+                <div class="statContainer">
+                  <p>Heat Waves</p>
+                  <h2>&#8593 20</h2>
+                  <p>Since 2000</p>
+                </div>
+                <div class="statContainer">
+                  <p>Flash Floods</p>
+                  <h2>&#8593 20</h2>
+                  <p>Since 2019</p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="mySlides1">
+          <video src="tulsa2.mov" muted loop></video>
+          <div class="info">
+              <h1>BY 2030, TULSA CAN EXPECT MORE EXTREME WEATHER - IMPACTING WEAHTER, WILDLIFE, AND HOMES.</h1>
+                <!--<div class="row">
+                <div class="statContainer">
+                  10% luck
+                </div>
+                <div class="statContainer">
+                  20% skill
+                </div>
+                <div class="statContainer">
+                  15% concentrated power of will
+                </div>
+              </div>-->
+            </div>
+        </div>
+
+        <div class="mySlides1">
+          <video src="tulsta3.mov" muted loop></video>
+          <div class="info">
+              <h1>TULSA NEEDS YOUR CLIMATE ACTION. HERE'S WHAT YOU CAN DO:</h1>
+              <div class="row">
+                <div class="statContainer">
+                  <h2>Email</h2>
+                  <p>Your Legislator</p>
+                </div>
+                <div class="statContainer">
+                  <h2>Educate</h2>
+                  <p>Your Community</p>
+                </div>
+                <div class="statContainer">
+                  <h2>Support</h2>
+                  <p>Relevent Orgs</p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+      </div>
+    </div>
+
+
+    <!-- Alaska -->
+    <div id="1" class="">
+      <div class="slideshow-container">
+
+        <div class="mySlides2">
+          <video src="alaska2.mp4" muted loop></video>
+          <div class="info">
+              <h1>LATELY, ANCHORAGE HAS HAD WARMER WINTERS AND RISING SEA LEVELS.</h1>
+              <div class="row">
+                <div class="statContainer" onmouseover="mouseOver(this, 'OVER THE LAST 60 YEARS, ALASKA HAS WARMED TWICE AS FAST AS THE REST OF THE U.S.'')" mouseOut="mouseOver(this, 'OVER THE LAST 60 YEARS, ALASKA HAS WARMED TWICE AS FAST AS THE REST OF THE U.S.'')">
+                  <p>Winter Temps</p>
+                  <h2>&#8593 6 deg</h2>
+                  <p>In 60 years</p>
+                </div>
+                <div class="statContainer">
+                  <p>Sea Ice</p>
+                  <h2>&#8595 50%</h2>
+                  <p>Since 1979</p>
+                </div>
+                <div class="statContainer">
+                  <p>Artic Sea Ice</p>
+                  <h2>GONE</h2>
+                  <p>By Mid-century</p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="mySlides2">
+          <video src="alaska1.mp4" muted loop></video>
+          <div class="info">
+              <h1>BY 2030, ANCHORAGE CAN EXPECT RISING SEA LEVELS THAT IMPACT PEOPLE, ANIMALS, AND LAND.</h1>
+
+            </div>
+        </div>
+
+        <div class="mySlides2">
+          <video src="alaska3.mov" muted loop></video>
+          <div class="info">
+              <h1>ANCHORAGE NEEDS YOUR CLIMATE ACTION. HERE'S WHAT YOU CAN DO:</h1>
+              <div class="row">
+                <div class="statContainer">
+                  <h2>Email</h2>
+                  <p>Your Legislator</p>
+                </div>
+                <div class="statContainer">
+                  <h2>Conserve</h2>
+                  <p>Your Energy</p>
+                </div>
+                <div class="statContainer">
+                  <h2>Support</h2>
+                  <p>Those Impacted</p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+      </div>
+    </div>
+
+    <!-- California -->
+    <div id="2" class="">
+      <div class="slideshow-container">
+
+        <div class="mySlides3">
+          <video src="cali1.mp4" muted loop></video>
+          <div class="info">
+              <h1>SACRAMENTO'S FIRES HAVE GROWN IN SIZE AND IMPACT.</h1>
+              <div class="row">
+                <div class="statContainer">
+                  <p>Summer Fires</p>
+                  <h2>&#8593 500%</h2>
+                  <p>Increase in size</p>
+                </div>
+                <div class="statContainer">
+                  <p>Acres Burned</p>
+                  <h2>459K</h2>
+                  <p>By Mendocino</p>
+                </div>
+                <div class="statContainer">
+                  <p>Forests</p>
+                  <h2>GONE</h2>
+                  <p>(nearly) By 2070</p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="mySlides3">
+          <video src="cali2.mov" muted loop></video>
+          <div class="info">
+              <h1>BY 2030, SACRAMENTO CAN EXPECT AN INCREASE IN FIRES AND FAR LESS FUNDING TO FIGHT THEM.</h1>
+            </div>
+        </div>
+
+        <div class="mySlides3">
+          <video src="cali3.mp4" muted loop></video>
+          <div class="info">
+              <h1>SACRAMENTO NEEDS CLIMATE ACTION. HERE'S WHAT YOU CAN DO:</h1>
+              <div class="row">
+                <div class="statContainer">
+                  <h2>Text</h2>
+                  <p>Your Legislator</p>
+                </div>
+                <div class="statContainer">
+                  <h2>Conserve</h2>
+                  <p>Your Water</p>
+                </div>
+                <div class="statContainer">
+                  <h2>Support</h2>
+                  <p>Controlled Burns</p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+      </div>
+    </div>
+
+    <div class="NewsletterTab"></div>
+  </body>
+</html>
+
+<script>
+  function switchSelectedBoi(x) {
+    document.getElementById(10).value = x;
+    switchPlace(x);
+  }
+  function mouseOver(element, text) {
+    element.text = text;
+  }
+
+  function switchPlace(elementID) {
+    console.log(elementID);
+    clearSelection();
+    document.getElementById(elementID).style.display = "block";
+    window.scrollBy(0,1600)
+  }
+  function clearSelection(){
+    document.getElementById('1').style.display = "none";
+    document.getElementById('2').style.display = "none";
+    document.getElementById('3').style.display = "none";
+  }
+  (function(){
+    document.getElementById('1').style.display = "none";
+    document.getElementById('2').style.display = "none";
+    document.getElementById('3').style.display = "none";
+  })();
+  var slideIndex = [1,1,1];
+  /* Class the members of each slideshow group with different CSS classes */
+  var slideId = ["mySlides1", "mySlides2","mySlides3"]
+  showSlides(1, 0);
+  showSlides(1, 1);
+  showSlides(1, 2);
+
+  function plusSlides(n, no) {
+    showSlides(slideIndex[no] += n, no);
+  }
+
+  function showSlides(n, no) {
+    var i;
+    var x = document.getElementsByClassName(slideId[no]);
+    if (n > x.length) {slideIndex[no] = 1}
+    if (n < 1) {slideIndex[no] = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+      x[i].children[0].pause();
+    }
+    x[slideIndex[no]-1].children[0].play();
+    x[slideIndex[no]-1].style.display = "block";
+    setTimeout(showSlides, 10000);
+  }
+</script>
